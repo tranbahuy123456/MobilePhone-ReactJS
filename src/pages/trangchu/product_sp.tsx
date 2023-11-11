@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Iproduct } from '~/interface/interface';
 
 const Product_sp: React.FC = () => {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<Iproduct[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +27,7 @@ const Product_sp: React.FC = () => {
                             <img className='w-[212px]' src={products.img} />
                             <span className="text-xl font-light text-[#000] ">{products.name}</span><br />
                             <span className='text-[#000] font-[20px]'>{products.price}đ</span> <br />
+                            <button className='bg-slate-800 text-red-600 w-[80px] h-[50px] rounded-lg	' >Mua Ngay</button>
                         </div>
 
                     )
